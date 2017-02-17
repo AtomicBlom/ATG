@@ -13,7 +13,7 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
-
+apply plugin: 'idea'
 /*
 // for people who want stable - not yet functional for MC 1.8.8 - we require the forgegradle 2.1 snapshot
 plugins {
@@ -23,6 +23,17 @@ plugins {
 version = "2.0"
 group= "ttftcuts.atg" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "atg"
+
+///////////////////////////////////////////////////
+// IDE Settings
+///////////////////////////////////////////////////
+idea {
+    project {
+        languageLevel = '1.8'
+    }
+}
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 minecraft {
     version = "1.10.2-12.18.3.2221"
